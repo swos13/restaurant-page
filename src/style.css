@@ -1,5 +1,40 @@
+
+:root {
+    --black-transparent: rgba(25,25,25,0.95);
+}
+
 body {
+    height: 100vh;
     background-image: url('./images/restaurant.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    display: grid;
+    grid-template: 64px 1fr / 50%;
+    justify-content: center;
+    gap: 16px;
+}
+
+header {
+    background-color: var(--black-transparent);
+}
+
+nav {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+nav > button {
+    flex: 1;
+}
+
+#content {
+    color: white;
+    background-color: var(--black-transparent);
 }
