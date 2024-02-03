@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Ringift;
+    src: url('./fonts/Ringift.ttf');
+}
 
 :root {
     --black-transparent: rgba(25,25,25,0.95);
@@ -25,7 +29,7 @@ header {
 }
 
 header > h1 {
-    font: 2rem Roboto, Helvetica, sans-serif;
+    font: 2.5rem Ringift, Helvetica, sans-serif;
     align-self: center;
     text-align: center;
     margin: 0;
