@@ -3,6 +3,11 @@
     src: url('./fonts/Ringift.ttf');
 }
 
+@font-face {
+    font-family: Cormorant-Italic;
+    src: url('./fonts/Cormorant-Italic.ttf');
+}
+
 :root {
     --black-transparent: rgba(25,25,25,0.95);
 }
@@ -58,4 +63,44 @@ nav > button:active {
 #content {
     color: white;
     background-color: var(--black-transparent);
+}
+
+.home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.home > * {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.slogan-container {
+    position: relative;
+    margin-top: 32px;
+}
+
+.slogan-container > img {
+    width: 100%;
+}
+
+.slogan-container > h3 {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 4rem Cormorant-Italic, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black;
+}
+
+.home > p {
+    font: 1.3rem Roboto, Helvetica, sans-serif;
+}
+
+.home > p > a {
+    font-style: italic;
+    color: white;
 }

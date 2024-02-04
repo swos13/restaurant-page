@@ -1,6 +1,10 @@
+import FoodImage from './images/food.jpg';
+
 const displayController = (()=> {
 
     const addElementsToContainer = (container) => {
+        const sloganContainer = document.createElement('div');
+        const image = document.createElement('img');
         const brandSlogan = document.createElement('h3');
         const mainText = document.createElement('p');
         const menu = document.createElement('p');
@@ -8,6 +12,8 @@ const displayController = (()=> {
         const phone = document.createElement('p');
         const open = document.createElement('p');
 
+        sloganContainer.classList.add('slogan-container');
+        image.src = FoodImage;
         brandSlogan.textContent = "Unique Italian taste";
         mainText.textContent = "We invite you to try our most delicious italian meals in our restaurant in heart of Poznan";
         menu.textContent = "Check out our ";
@@ -18,11 +24,14 @@ const displayController = (()=> {
         menuLink.href = "./menu.html";
         menu.appendChild(menuLink);
 
-        container.appendChild(brandSlogan);
+        sloganContainer.appendChild(image);
+        sloganContainer.appendChild(brandSlogan);
+        container.appendChild(sloganContainer);
         container.appendChild(mainText);
         container.appendChild(menu);
         container.appendChild(phone);
         container.appendChild(open);
+        container.classList.add('home');
     }
 
     return { addElementsToContainer };
