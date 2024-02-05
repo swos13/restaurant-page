@@ -2,7 +2,7 @@ import FoodImage from './images/food.jpg';
 
 const displayController = (()=> {
 
-    const addElementsToContainer = (container) => {
+    const displayContent = (container) => {
         const sloganContainer = document.createElement('div');
         const image = document.createElement('img');
         const brandSlogan = document.createElement('h3');
@@ -34,7 +34,7 @@ const displayController = (()=> {
         container.classList.add('home');
     }
 
-    return { addElementsToContainer };
+    return { displayContent };
 })();
 
 export default displayController;
