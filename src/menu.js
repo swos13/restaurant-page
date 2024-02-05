@@ -27,11 +27,12 @@ const displayController = (()=> {
         clearMenu();
         menuItems.forEach(dish => {
             const dishContainer = document.createElement('div');
+            dishContainer.classList.add('dish-container');
             const name = document.createElement('h2');
             name.textContent = dish[0];
             const ingredients = document.createElement('p');
             ingredients.textContent = dish.slice(1, -1).join(", ");
-            const price = document.createElement('h5');
+            const price = document.createElement('h4');
             price.textContent = dish.slice(-1);
 
             dishContainer.appendChild(name);
