@@ -1,3 +1,5 @@
 import './style.css';
+import homeDisplayController from './home.js';
 
-console.log("Here we go!");
+const content = document.querySelector('#content');
+homeDisplayController.addElementsToContainer(content);

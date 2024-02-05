@@ -1,5 +1,105 @@
+@font-face {
+    font-family: Ringift;
+    src: url('./fonts/Ringift.ttf');
+}
+
+@font-face {
+    font-family: Cormorant-Italic;
+    src: url('./fonts/Cormorant-Italic.ttf');
+}
+
+:root {
+    --black-transparent: rgba(25,25,25,0.95);
+}
+
 body {
+    height: 100vh;
     background-image: url('./images/restaurant.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    display: grid;
+    grid-template: 128px 1fr / 50%;
+    justify-content: center;
+    gap: 16px;
+}
+
+header {
+    color: white;
+    background-color: var(--black-transparent);
+    display: grid;
+    grid-template-rows: 80px 48px;
+}
+
+header > h1 {
+    font: 4rem Ringift, Helvetica, sans-serif;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+nav > button {
+    flex: 1;
+    font: 1rem Roboto, Helvetica, sans-serif;
+    color: white;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+nav > button:active {
+    background-color: rgba(150,150,150,0.2);
+}
+
+#content {
+    color: white;
+    background-color: var(--black-transparent);
+}
+
+.home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.home > * {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.slogan-container {
+    position: relative;
+    margin-top: 32px;
+}
+
+.slogan-container > img {
+    width: 100%;
+}
+
+.slogan-container > h3 {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 4rem Cormorant-Italic, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black;
+}
+
+.home > p {
+    font: 1.3rem Roboto, Helvetica, sans-serif;
+}
+
+.home > p > a {
+    font-style: italic;
+    color: white;
 }
