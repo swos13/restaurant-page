@@ -107,7 +107,6 @@ nav > button:active {
 .menu {
     display: grid;
     grid-template-rows: 96px 1fr;
-    max-width: ;
 }
 
 .tabs-container {
