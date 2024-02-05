@@ -17,6 +17,30 @@ const displayController = (()=> {
         menu.set('desserts', Desserts);
     }
 
+    const clearMenu = () => {
+        while(menuContainer.firstChild){
+            menuContainer.removeChild(menuContainer.lastChild);
+        }
+    }
+
+    const showMenu = (menuItems) => {
+        clearMenu();
+        menuItems.forEach(dish => {
+            const dishContainer = document.createElement('div');
+            const name = document.createElement('h2');
+            name.textContent = dish[0];
+            const ingredients = document.createElement('p');
+            ingredients.textContent = dish.slice(1, -1).join(", ");
+            const price = document.createElement('h5');
+            price.textContent = dish.slice(-1);
+
+            dishContainer.appendChild(name);
+            dishContainer.appendChild(ingredients);
+            dishContainer.appendChild(price);
+            menuContainer.appendChild(dishContainer);
+        })
+    }
+
     const clearTabsButtonsClass = () => {
         buttons.forEach(button => {
             button.classList.remove('active');
@@ -40,10 +64,10 @@ const displayController = (()=> {
             button.addEventListener('click', () => {
                 clearTabsButtonsClass();
                 button.classList.add('active');
+                showMenu(menu.get(button.textContent.toLowerCase()));
             })
         });
 
-        console.log(buttons);
         const tabsButtonsContainer = document.createElement('div');
         tabsButtonsContainer.classList.add('tabs-container');
         tabsButtonsContainer.appendChild(appetizersButton);
