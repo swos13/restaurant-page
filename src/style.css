@@ -21,7 +21,7 @@ body {
     padding-bottom: 32px;
 
     display: grid;
-    grid-template: 128px 1fr / 50%;
+    grid-template: 128px calc(100vh - 128px) / 50%;
     justify-content: center;
     gap: 16px;
 }
@@ -102,4 +102,56 @@ nav > button:active {
 .home > p > a {
     font-style: italic;
     color: white;
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: 96px 1fr;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-container > button {
+    width: 20%;
+    padding: 0.5rem;
+    font: 1rem Roboto, Helvetica, sans-serif;
+    color: white;
+    border: 2px solid #aaaaaa;
+    background-color: rgba(0,0,0,0);
+}
+
+.tabs-container > button:not(button:first-of-type) {
+    border-left-width: 0px;
+}
+
+.tabs-container > button:not(button:last-of-type) {
+    border-right-width: 0px;
+}
+
+.tabs-container > button.active {
+    background-color: #808080;
+}
+
+.menu-container {
+    overflow: auto;
+}
+
+.dish-container {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.dish-container > * {
+    font-family: Roboto, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.dish-container > p {
+    font-size: 1.2rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
