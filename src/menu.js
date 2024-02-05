@@ -47,6 +47,11 @@ const displayController = (()=> {
         })
     }
 
+    const doButtonEvent = (button) => {
+        button.classList.add('active');
+        showMenu(menu.get(button.textContent.toLowerCase()));
+    }
+
     const createTabButtons = () => {
         const appetizersButton = document.createElement('button');
         const pizzasButton = document.createElement('button');
@@ -63,8 +68,7 @@ const displayController = (()=> {
             button.id = button.textContent.toLowerCase();
             button.addEventListener('click', () => {
                 clearTabsButtonsClass();
-                button.classList.add('active');
-                showMenu(menu.get(button.textContent.toLowerCase()));
+                doButtonEvent(button);
             })
         });
 
@@ -83,6 +87,7 @@ const displayController = (()=> {
         container.setAttribute('class', 'menu');
         container.appendChild(createTabButtons());
         container.appendChild(menuContainer);
+        doButtonEvent(buttons[0]);
     }
 
     return { displayContent };
