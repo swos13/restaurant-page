@@ -103,3 +103,35 @@ nav > button:active {
     font-style: italic;
     color: white;
 }
+
+.menu {
+    display: grid;
+    grid-template-rows: 96px 1fr;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-container > button {
+    width: 20%;
+    padding: 0.5rem;
+    font: 1rem Roboto, Helvetica, sans-serif;
+    color: white;
+    border: 2px solid #aaaaaa;
+    background-color: rgba(0,0,0,0);
+}
+
+.tabs-container > button:not(button:first-of-type) {
+    border-left-width: 0px;
+}
+
+.tabs-container > button:not(button:last-of-type) {
+    border-right-width: 0px;
+}
+
+.tabs-container > button.active {
+    background-color: #808080;
+}

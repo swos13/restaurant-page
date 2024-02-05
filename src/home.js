@@ -31,7 +31,7 @@ const displayController = (()=> {
         container.appendChild(menu);
         container.appendChild(phone);
         container.appendChild(open);
-        container.classList.add('home');
+        container.setAttribute('class','home');
     }
 
     return { displayContent };
