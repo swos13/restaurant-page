@@ -33,6 +33,10 @@ module.exports = {
                 test: /\.(csv|tsv)$/i,
                 use: ['csv-loader'],
             },
+            {
+                test: /\.txt$/i,
+                use: ['raw-loader'],
+            }
         ]
     }
 }
