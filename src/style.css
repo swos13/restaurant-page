@@ -131,7 +131,7 @@ nav > button:active {
 }
 
 .tabs-container > button {
-    width: 20%;
+    width: max(20%, 96px);
     padding: 0.5rem;
     font: 1rem Roboto, Helvetica, sans-serif;
     color: white;
@@ -153,6 +153,7 @@ nav > button:active {
 
 .menu-container {
     overflow: auto;
+    padding: 16px 0;
 }
 
 .dish-container {
@@ -162,7 +163,7 @@ nav > button:active {
 
 .dish-container > * {
     font-family: Roboto, Helvetica, sans-serif;
-    margin: 0;
+    margin: 0 10%;
 }
 
 .dish-container > p {
@@ -207,4 +208,31 @@ nav > button:active {
     font: 1.2rem Roboto, Helvetica, sans-serif;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+@media (max-width: 366px){
+
+    .menu {
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    .tabs-container {
+        margin-top: 32px;
+        flex-direction: column;
+    }
+
+    .tabs-container > button {
+        border: 2px solid #aaaaaa;
+    }
+    
+    .tabs-container > button:not(button:first-of-type) {
+        border-top-width: 0px;
+        border-left-width: 2px;
+    }
+    
+    .tabs-container > button:not(button:last-of-type) {
+        border-bottom-width: 0px;
+        border-right-width: 2px;
+    }
 }
