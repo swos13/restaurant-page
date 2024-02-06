@@ -36,7 +36,7 @@ body {
     padding-bottom: 32px;
 
     display: grid;
-    grid-template: 128px calc(100vh - 128px) / 50%;
+    grid-template: 128px calc(100vh - 128px) / max(50%, 480px);
     justify-content: center;
     gap: 16px;
 }
@@ -106,7 +106,7 @@ nav > button:active {
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: 4rem Cormorant-Italic, Helvetica, sans-serif;
+    font: max(48px, min(8vh,4vw)) Cormorant-Italic, Helvetica, sans-serif;
     text-shadow: 1px 1px 2px black;
 }
 
