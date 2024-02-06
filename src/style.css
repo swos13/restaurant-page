@@ -31,12 +31,12 @@ body {
     height: 100vh;
     background-image: url('./images/restaurant.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding-top: 32px;
     padding-bottom: 32px;
 
     display: grid;
-    grid-template: 128px calc(100vh - 128px) / max(50%, 480px);
+    grid-template: 128px calc(100vh - 128px) / max(50%, 320px);
     justify-content: center;
     gap: 16px;
 }
@@ -59,7 +59,7 @@ nav {
     align-self: stretch;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: min(16px,1vw);
 }
 
 nav > button {
@@ -106,7 +106,7 @@ nav > button:active {
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: max(48px, min(8vh,4vw)) Cormorant-Italic, Helvetica, sans-serif;
+    font: max(32px, min(8vh,4vw)) Cormorant-Italic, Helvetica, sans-serif;
     text-shadow: 1px 1px 2px black;
 }
 
