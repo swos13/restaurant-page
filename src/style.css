@@ -8,6 +8,16 @@
     src: url('./fonts/Cormorant-Italic.ttf');
 }
 
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto-Regular.woff');
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
 :root {
     --black-transparent: rgba(25,25,25,0.95);
 }
@@ -154,4 +164,26 @@ nav > button:active {
     font-size: 1.2rem;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.about > * {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+.about > h2 {
+    text-align: center;
+    font: 2rem Roboto-Bold, Helvetica, sans-serif;
+}
+
+.about > h4 {
+    margin-top: 64px;
+    text-align: center;
+    font: 1.5rem Roboto-Medium, Helvetica, sans-serif;
+}
+
+.about > p {
+    text-align: center;
+    font: 1.2rem Roboto, Helvetica, sans-serif;
 }

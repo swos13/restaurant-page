@@ -11,8 +11,17 @@ const displayController = (()=> {
         const historyHeader = document.createElement('h4');
         const historyPara = document.createElement('p');
 
-        console.log(OurFood);
-        console.log(OurHistory);
+        header.textContent = "About us...";
+        foodHeader.textContent = "Our food...";
+        historyHeader.textContent = "Our history...";
+        foodPara.textContent = OurFood;
+        historyPara.textContent = OurHistory;
+
+        container.appendChild(header);
+        container.appendChild(foodHeader);
+        container.appendChild(foodPara);
+        container.appendChild(historyHeader);
+        container.appendChild(historyPara);
     }
 
     return { displayContent };
