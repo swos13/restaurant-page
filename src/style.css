@@ -31,12 +31,12 @@ body {
     height: 100vh;
     background-image: url('./images/restaurant.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding-top: 32px;
     padding-bottom: 32px;
 
     display: grid;
-    grid-template: 128px calc(100vh - 128px) / 50%;
+    grid-template: 128px calc(100vh - 128px) / max(50%, 320px);
     justify-content: center;
     gap: 16px;
 }
@@ -59,7 +59,7 @@ nav {
     align-self: stretch;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: min(16px,1vw);
 }
 
 nav > button {
@@ -106,7 +106,7 @@ nav > button:active {
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: 4rem Cormorant-Italic, Helvetica, sans-serif;
+    font: max(32px, min(8vh,4vw)) Cormorant-Italic, Helvetica, sans-serif;
     text-shadow: 1px 1px 2px black;
 }
 
@@ -131,7 +131,7 @@ nav > button:active {
 }
 
 .tabs-container > button {
-    width: 20%;
+    width: max(20%, 96px);
     padding: 0.5rem;
     font: 1rem Roboto, Helvetica, sans-serif;
     color: white;
@@ -153,6 +153,7 @@ nav > button:active {
 
 .menu-container {
     overflow: auto;
+    padding: 16px 0;
 }
 
 .dish-container {
@@ -162,13 +163,18 @@ nav > button:active {
 
 .dish-container > * {
     font-family: Roboto, Helvetica, sans-serif;
-    margin: 0;
+    margin: 0 10%;
 }
 
 .dish-container > p {
     font-size: 1.2rem;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.about {
+    overflow: auto;
+    padding: 16px 0;
 }
 
 .about > * {
@@ -196,7 +202,7 @@ nav > button:active {
     margin-left: 10%;
     margin-right: 10%;
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
 }
 
 .contact h3 {
@@ -207,4 +213,31 @@ nav > button:active {
     font: 1.2rem Roboto, Helvetica, sans-serif;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+@media (max-width: 366px){
+
+    .menu {
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    .tabs-container {
+        margin-top: 32px;
+        flex-direction: column;
+    }
+
+    .tabs-container > button {
+        border: 2px solid #aaaaaa;
+    }
+    
+    .tabs-container > button:not(button:first-of-type) {
+        border-top-width: 0px;
+        border-left-width: 2px;
+    }
+    
+    .tabs-container > button:not(button:last-of-type) {
+        border-bottom-width: 0px;
+        border-right-width: 2px;
+    }
 }
