@@ -202,7 +202,8 @@ nav > button:active {
     margin-left: 10%;
     margin-right: 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 48px;
 }
 
 .contact h3 {
