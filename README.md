@@ -1,7 +1,9 @@
 # restaurant-page
-restaurant page project from TheOdinProject's JavaScript course 
+Restaurant page project from TheOdinProject's JavaScript course 
 
-To run the project, you need npm and webpack. With npm installed in main folder use ```npm install```
+Live preview - https://swos13.github.io/restaurant-page/
+
+To run the project on your own computer, you need npm and webpack. With npm installed in main folder use ```npm install``` to get all required dependencies.
 
 Pictures credits:
 
